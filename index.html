@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Card Game</title>
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+  <body>
+      <div class = "board-grid">
+        <div><img src="assets\deckback.png" alt="Opponent's Deck" width="100px" height="150px"></div>
+        <button id="OppHand1">OppHand4</button>
+        <button id="OppHand2">OppHand3</button>
+        <button id="OppHand3">OppHand2</button>
+        <button id="OppHand4">OppHand1</button>
+        <div></div>
+        <button id= OppBoard4 onclick="defendCardFour(boardPlayerOne,boardPlayerTwo,selectAttacker)">OppBoard1</button>
+        <button id= OppBoard2 onclick="defendCardTwo(boardPlayerOne,boardPlayerTwo,selectAttacker)">OppBoard2</button>
+        <button id= OppBoard1 onclick="defendCardOne(boardPlayerOne,boardPlayerTwo,selectAttacker)">OppBoard3</button>
+        <button id= OppBoard3 onclick="defendCardThree(boardPlayerOne,boardPlayerTwo,selectAttacker)">OppBoard4</button>
+        <button id= OppBoard5 onclick="defendCardFive(boardPlayerOne,boardPlayerTwo,selectAttacker)">OppBoard5</button>
+        <div></div>
+        <button id= PlayerBoard4 onclick="attackCardFour(boardPlayerOne, selectAttacker)">PlayerBoard4</button>
+        <button id= PlayerBoard2 onclick="attackCardTwo(boardPlayerOne, selectAttacker)">PlayerBoard2</button>
+        <button id= PlayerBoard1 onclick="attackCardOne(boardPlayerOne, selectAttacker)">PlayerBoard1</button>
+        <button id= PlayerBoard3 onclick="attackCardThree(boardPlayerOne, selectAttacker)"> PlayerBoard3</button>
+        <button id= PlayerBoard5 onclick="attackCardFive(boardPlayerOne, selectAttacker)">PlayerBoard5</button>
+        <button id = StartButton onclick="phaseOpening(handPlayerOne,deckPlayerOne,handPlayerTwo,deckPlayerTwo,boardPlayerTwo)">Start Game</button>
+        <div class = "board-element"><img src="assets\deckback.png" alt="Your Deck" width="100px" height="150px"></div>
+        <button id = PlayerHand1 onclick="playCardOne(boardPlayerOne,handPlayerOne)">playerhand1</button>
+        <button id = PlayerHand2 onclick="playCardTwo(boardPlayerOne,handPlayerOne)">playerhand2</button>
+        <button id = PlayerHand3 onclick="playCardThree(boardPlayerOne,handPlayerOne)">playerhand3</button>
+        <button id = PlayerHand4 onclick="playCardFour(boardPlayerOne,handPlayerOne)">playerhand4</button>
+      </div>
+  </body>
+
+</html>

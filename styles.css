@@ -1,0 +1,44 @@
+.board-grid {
+display: grid;
+justify-content: center;
+align-content: center;
+min-height: 100vh;
+grid-template-columns: repeat(6, 115px);
+grid-template-rows: repeat(4, 160px);
+}
+
+
+button[id="PlayerBoard1"]:active{
+    background:red;
+}
+button[id="PlayerBoard1"]:focus{
+    background:red;
+}
+
+button[id="PlayerBoard2"]:active{
+    background:red;
+}
+button[id="PlayerBoard2"]:focus{
+    background:red;
+}
+
+button[id="PlayerBoard3"]:active{
+    background:red;
+}
+button[id="PlayerBoard3"]:focus{
+    background:red;
+}
+
+button[id="PlayerBoard4"]:active{
+    background:red;
+}
+button[id="PlayerBoard4"]:focus{
+    background:red;
+}
+
+button[id="PlayerBoard5"]:active{
+    background:red;
+}
+button[id="PlayerBoard5"]:focus{
+    background:red;
+}
