@@ -21,8 +21,8 @@ function createDecks(arr,arr2){
   for (let i = 1; arr.length<10; i++){
     arr.push(createCard('card'+i, i));
   }
-  for (let i = 11; arr2.length<10; i++){
-    arr2.push(createCard('card'+i, i));
+  for (let i = 1; arr2.length<10; i++){
+    arr2.push(createCard('card'+(i+10), i));
   }
 }
 
