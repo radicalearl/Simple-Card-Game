@@ -1,110 +1,6 @@
-const deckPlayerOne = [
-  {
-      cardId: 'Card1',
-      powerLevel: 1,
-      image: 'assets/card1.jpg',
-  },
-  {
-      cardId: 'Card2',
-      powerLevel: 2,
-      image: 'assets/card2.jpg',
-  },
-  {
-      cardId: 'Card3',
-      powerLevel: 3,
-      image: 'assets/card3.jpg',
-  },
-  {
-      cardId: 'Card4',
-      powerLevel: 4,
-      image: 'assets/card4.jpg',
-  },
-  {
-      cardId: 'Card5',
-      powerLevel: 5,
-      image: 'assets/card5.jpg',
-  },
-  {
-      cardId: 'Card6',
-      powerLevel: 6,
-      image: 'assets/card6.jpg',
-  },
-  {
-      cardId: 'Card7',
-      powerLevel: 7,
-      image: 'assets/card7.jpg',
-  },
-  {
-      cardId: 'Card8',
-      powerLevel: 8,
-      image: 'assets/card8.jpg',
-  },
-  {
-      cardId: 'Card9',
-      powerLevel: 9,
-      image: 'assets/card9.jpg',
-  },
-  {
-      cardId: 'Card10',
-      powerLevel: 10,
-      image: 'assets/card10.jpg',
-  }
-];
-
-const deckPlayerTwo = [
-  {
-    cardId: 'Card11',
-    powerLevel: 1,
-    image: 'assets/card11.jpg',
-  },
-  {
-    cardId: 'Card12',
-    powerLevel: 2,
-    image: 'assets/card12.jpg',
-  },
-  {
-    cardId: 'Card13',
-    powerLevel: 3,
-    image: 'assets/card13.jpg',
-  },
-  {
-    cardId: 'Card14',
-    powerLevel: 4,
-    image: 'assets/card14.jpg',
-  },
-  {
-    cardId: 'Card15',
-    powerLevel: 5,
-    image: 'assets/card15.jpg',
-  },
-  {
-    cardId: 'Card16',
-    powerLevel: 6,
-    image: 'assets/card16.jpg',
-  },
-  {
-    cardId: 'Card17',
-    powerLevel: 7,
-    image: 'assets/card17.jpg',
-  },
-  {
-    cardId: 'Card18',
-    powerLevel: 8,
-    image: 'assets/card18.jpg',
-  },
-  {
-    cardId: 'Card19',
-    powerLevel: 9,
-    image: 'assets/card19.jpg',
-  },
-  {
-    cardId: 'Card20',
-    powerLevel: 10,
-    image: 'assets/card20.jpg',
-  }
-];
-
 var gameStarted = false; 
+const deckPlayerOne = [];
+const deckPlayerTwo = [];
 const handPlayerOne = [];
 const handPlayerTwo = [];
 const boardPlayerOne = [];
@@ -112,14 +8,23 @@ const boardPlayerTwo = [];
 const selectAttacker = [];
 //selectAttacker holds one card, the one attacking and stores it waiting for defend selection
 
-
-/*
-//create function that outputs object's value (in this case we want cardId). Below get document by id will = function(hand [0])
-const cardDisplay = (arrIndex) => {
-  arrIndex.cardId;
-  
+//createCard function factory, and create createDecks that calls it on loop till deck is full.
+function createCard(cardId, powerLevel){
+  return {
+    cardId: cardId,
+    powerLevel: powerLevel,
+    image: 'assets/' + cardId + '.jpg',
+  }
 }
-*/
+
+function createDecks(arr,arr2){
+  for (let i = 1; arr.length<10; i++){
+    arr.push(createCard('card'+i, i));
+  }
+  for (let i = 11; arr2.length<10; i++){
+    arr2.push(createCard('card'+i, i));
+  }
+}
 
 //display hand
 function displayHand(hand) {
